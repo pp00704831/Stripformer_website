@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta name="author" content="Fu-Jen Tsai">
+  <title>Stripformer: Strip Transformer for Fast Image Deblurring</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!--<meta property="og:image" content="http://gph.is/2oZQz8h" />-->
+</head>
+<body>
+
+  <div class="navbar-fixed">
+
+    <nav class="grey darken-4" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+        <ul class="left hide-on-med-and-down">
+          <li><a class="nav-item waves-effect waves-light" href="#home">Home</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#abstract">Abstract</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#paper">Paper</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#citation">Citation</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#download">Results</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#reference">References</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container scrollspy" id="home">
+        <h4 class="header center black-text">Stripformer: Strip Transformer for Fast Image Deblurring (ECCV 2022 Oral)</h4>
+
+      <br>
+
+      <div class="row center">
+        <h5 class="header col m4 s12">
+          <div class="author"><a href = "" target="blank">Fu-Jen Tsai</a></div>
+          <div class="school"><a href="http://nthu-en.site.nthu.edu.tw/" target="blank">National Tsing Hua University</a></div>
+        </h5>
+
+        <h5 class="header col m4 s12">
+          <div class="author"><a href="https://www.cs.nccu.edu.tw/~ytpeng/" target="blank">Yan-Tsung Peng</a></div>
+          <div class="school"><a href="https://www.nccu.edu.tw/app/home.php" target="blank">National Chengchi University</a></div>
+        </h5>
+
+        <h5 class="header col m4 s12">
+          <div class="author"><a href="https://sites.google.com/site/yylinweb/" target="blank">Yen-Yu Lin</a></div>
+          <div class="school"><a href="https://www.nycu.edu.tw/" target="blank">National Yang Ming Chiao Tung University</a></div>
+        </h5>
+        </div>
+      <div class="row center">
+        <h5 class="header col m4 s12">
+          <div class="author"><a href="https://www.linkedin.com/in/cctsai1/" target="blank">Chung-Chi Tsai</a></div>
+          <div class="school"><a href="https://www.qualcomm.com/" target="blank">Qualcomm Technologies, Inc.</a></div>
+        </h5>
+        <h5 class="header col m4 s12">
+          <div class="author"><a href="https://www.ee.nthu.edu.tw/cwlin/" target="blank">Chia-Wen Lin</a></div>
+          <div class="school"><a href="http://nthu-en.site.nthu.edu.tw/" target="blank">National Tsing Hua University</a></div>
+        </h5>
+
+        </div>
+</div>
+
+
+
+</a></div>
+        </h5>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row center">
+        <div class="col l12 m12 s12">
+          <img class="responsive-img" src="img/Intra_Inter.PNG" width="90%">
+          </br>
+          </br>
+          </br>
+          <img class="responsive-img" src="img/gopro_result.png" width="90%">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row section scrollspy" id="abstract">
+      <div class="title">Abstract</div>
+      <br>
+      <p align="justify">Images taken in dynamic scenes may contain unwanted motion blur, which significantly degrades visual quality. Such blur causes
+short- and long-range region-specific smoothing artifacts that are often
+directional and non-uniform, which is difficult to be removed. Inspired
+by the current success of transformers on computer vision and image
+processing tasks, we develop, Stripformer, a transformer-based architecture that constructs intra- and inter-strip tokens to reweight image
+features in the horizontal and vertical directions to catch blurred patterns with different orientations. It stacks interlaced intra-strip and interstrip attention layers to reveal blur magnitudes. In addition to detecting
+region-specific blurred patterns of various orientations and magnitudes,
+Stripformer is also a token-efficient and parameter-efficient transformer
+model, demanding much less memory usage and computation cost than
+the vanilla transformer but works better without relying on tremendous
+training data. Experimental results show that Stripformer performs favorably against state-of-the-art models in dynamic scene deblurring.
+</p>
+    </div>
+
+    <div class="row section scrollspy" id="paper">
+      <div class="title">Papers</div>
+      <br>
+      <div class="row">
+
+        <div class="col m2 s6 center">
+          <a href="https://arxiv.org/abs/2204.04627" target="">
+            <img src="img/icon_pdf.png" width="60%">
+          </a>
+          <br>
+          <a href="https://arxiv.org/abs/2204.04627.pdf" target=""><br></a>
+        </div>
+
+    </div>
+
+
+
+      <br>
+
+      <div class="title">BibTex</div>
+      <pre>
+@inproceedings{Stripformer_2022,
+  author    = {Tsai, Fu-Jen and Peng, Yan-Tsung and Lin, Yen-Yu and Tsai, Chung-Chi and  Lin, Chia-Wen},
+  title     = {Stripformer: Strip Transformer for Fast Image Deblurring},
+  booktitle = {arXiv preprint arXiv:2204.04627},
+  year      = {2022}
+}
+      </pre>
+
+    </div>
+
+    <div class="section row scrollspy" id="download">
+      <div class="title">Code and Results</div>
+      <br>
+      <div class="row">
+
+        <div class="col m6 s12 center">
+          <a href="https://github.com/pp00704831/Stripformer" target="_blank">
+            <img src="img/github.png">
+          </a>
+          <br>
+          <a href="https://github.com/pp00704831/Stripformer" target="">Code</a>
+        </div>
+
+        <div class="col m6 s12 center">
+          <a href="https://drive.google.com/drive/folders/19uXbEEHojEwC29_jL8Gkd1jknc8kiRcR?usp=sharing" target="_blank">
+            <img src="img/icon_zip.png">
+          </a>
+          <br>
+          <a href="https://drive.google.com/drive/folders/19uXbEEHojEwC29_jL8Gkd1jknc8kiRcR?usp=sharing" >Results</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row section scrollspy" id="reference">
+      <div class="title">References</div>
+      <ul>
+        <li>&bull;
+          Nah et al. <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Nah_Deep_Multi-Scale_Convolutional_CVPR_2017_paper.pdf" target="blank">Deep Multi-scale Convolutional Neural Network for Dynamic Scene Deblurring.</a> In CVPR, 2017.
+        </li>
+
+        </li>&bull;
+          Tao et al. <a href="https://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1156.pdf" target="blank">Scale-recurrent network for deep image deblurring.</a> In CVPR, 2018.
+        </li>
+
+        <li>&bull;
+          Gao et al. <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Gao_Dynamic_Scene_Deblurring_With_Parameter_Selective_Sharing_and_Nested_Skip_CVPR_2019_paper.pdf" target="blank">Dynamic Scene Deblurring with Parameter Selective Sharing and Nested Skip Connections.</a> In CVPR, 2019.
+        </li>
+
+        <li>&bull;
+          Zhang et al. <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Nah_Deep_Multi-Scale_Convolutional_CVPR_2017_paper.pdf" target="blank">Deep Multi-scale Convolutional Neural Network for Dynamic Scene Deblurring.</a> In CVPR, 2019.
+        </li>
+
+        <li>&bull;
+          Suin et al. <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Suin_Spatially-Attentive_Patch-Hierarchical_Network_for_Adaptive_Motion_Deblurring_CVPR_2020_paper.pdf" target="blank">Spatially-Attentive Patch-Hierarchical Network for Adaptive Motion Deblurring.</a> In CVPR, 2020.
+        </li>
+
+        <li>&bull;
+          Cho et al. <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Cho_Rethinking_Coarse-To-Fine_Approach_in_Single_Image_Deblurring_ICCV_2021_paper.pdf" target="blank">Rethinking Coarse-to-Fine Approach in Single Image Deblurring.</a> In ICCV, 2021.
+        </li>
+
+        <li>&bull;
+          Zamir et al. <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zamir_Multi-Stage_Progressive_Image_Restoration_CVPR_2021_paper.pdf" target="blank">Multi-Stage Progressive Image Restoration.</a> In CVPR, 2021.
+        </li>
+
+        <li>&bull;
+          Chen et al. <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_Pre-Trained_Image_Processing_Transformer_CVPR_2021_paper.pdf" target="blank">Pre-Trained Image Processing Transformer.</a> In CVPR, 2021.
+        </li>
+
+
+      </ul>
+    </div>
+
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
+
